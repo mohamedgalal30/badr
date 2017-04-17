@@ -4,7 +4,7 @@ let http = require('http')
 
 
 let server = http.createServer(function(req, res) {
-	res.end(req.url)
+	require('./router').get(req, res);
 })
 server.listen(http_port, http_ip)
 console.log('Badr is running on http://' + http_ip + ":" + http_port)
